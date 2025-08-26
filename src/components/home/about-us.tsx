@@ -36,12 +36,12 @@ export function AboutUs({ className }: { className?: string }) {
             Development Partner
         </h1>
         <div className="grid grid-cols-2 gap-4 mt-6">
-            <Card className="w-full">
+            <Card className="w-full h-[60vh]">
                 <CardContent>
                     <p>Our team of experienced developers is dedicated to delivering high-quality solutions that meet your needs. We use the latest technologies and best practices to ensure that your project is completed on time and to the highest standard.</p>
                 </CardContent>
             </Card>
-            <Card className="w-full">
+            <Card className="w-full h-[60vh]">
                 <CardContent>
                     <p>Our team of experienced developers is dedicated to delivering high-quality solutions that meet your needs. We use the latest technologies and best practices to ensure that your project is completed on time and to the highest standard.</p>
                 </CardContent>
