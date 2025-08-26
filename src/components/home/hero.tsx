@@ -3,6 +3,7 @@ import Image, { StaticImageData } from 'next/image';
 import { cn } from '@/lib/utils';
 import { Anta, Audiowide } from 'next/font/google';
 import { BackgroundBeams } from '../ui/background-beams';
+import { TextGenerateEffect } from '../ui/text-generate-effect';
 
 const anta = Anta({
   weight: ["400"],
@@ -50,14 +51,15 @@ export function Hero({
       </div>
 
       {/* Content */}
-      <div className="container relative z-10 flex flex-col items-start justify-center h-full w-7xl px-0 mx-auto text-left text-white">
-        <p className={`${anta.className} text-left sm:w-4xl w-4xl tracking-widest mb-8 text-lg md:text-xl text-white/90`}>
-          {description}
-        </p>
-        <h1 className={`${audiowide.className} mb-6 z-10 tracking-widest text-start sm:w-4xl w-2xl text-2xl sm:text-4xl font-bold leading-tight md:text-6xl lg:text-7xl font-anta`}>
-          {title}
-        </h1>
-        <BackgroundBeams />
+      <div className="container relative z-10 flex flex-col items-start justify-center h-full w-full max-w-7xl px-4 mx-auto text-left text-white">
+        <div className="w-full max-w-4xl">
+          <p className={`${anta.className} text-lg md:text-xl tracking-widest text-white/90 mb-6`}>
+            {description}
+          </p>
+          <h1 className={`${audiowide.className} mb-8`}>
+            <TextGenerateEffect words={title} />
+          </h1>
+        </div>
       </div>
     </section>
   );

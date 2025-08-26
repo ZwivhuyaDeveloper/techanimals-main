@@ -4,6 +4,7 @@ import { BackgroundBeams } from "../ui/background-beams";
 import { Audiowide } from "next/font/google";
 import { Anta } from "next/font/google";
 import { cn } from "@/lib/utils";
+import { Card, CardContent } from "@/components/ui/card";
 
 const audiowide = Audiowide({
   weight: ["400"],
@@ -19,8 +20,8 @@ const anta = Anta({
 
 export function AboutUs({ className }: { className?: string }) {
   return (
-    <div className={cn("h-[100vh] w-full rounded-md dark:bg-neutral-950 bg-white relative flex flex-col items-center justify-center antialiased", className)}>
-      <div className="max-w-7xl items-start flex flex-col gap-4 w-full mx-auto px-0">
+    <div className={cn("h-[120vh] w-full rounded-md dark:bg-neutral-950 bg-white relative flex flex-col  justify-center antialiased", className)}>
+      <div className="max-w-7xl items-start h-full my-45 gap-6 flex flex-col w-full mx-auto">
         <h2 className={`${anta.className} 
             tracking-widest relative text-left z-10 text-lg sm:text-4xl 
             bg-clip-text text-transparent dark:bg-gradient-to-r dark:from-neutral-200 dark:to-neutral-600 
@@ -34,8 +35,17 @@ export function AboutUs({ className }: { className?: string }) {
             Your Trusted
             Development Partner
         </h1>
-        <div>
-            <p></p>
+        <div className="grid grid-cols-2 gap-4 mt-6">
+            <Card className="w-full">
+                <CardContent>
+                    <p>Our team of experienced developers is dedicated to delivering high-quality solutions that meet your needs. We use the latest technologies and best practices to ensure that your project is completed on time and to the highest standard.</p>
+                </CardContent>
+            </Card>
+            <Card className="w-full">
+                <CardContent>
+                    <p>Our team of experienced developers is dedicated to delivering high-quality solutions that meet your needs. We use the latest technologies and best practices to ensure that your project is completed on time and to the highest standard.</p>
+                </CardContent>
+            </Card>
         </div>
         <BackgroundBeams />
       </div>
