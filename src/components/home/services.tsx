@@ -26,7 +26,7 @@ export function Services() {
     <div className="gap-12 flex flex-col items-center">
         <div className="w-full gap-4 flex flex-col items-start max-w-7xl mx-auto">
             <h2 className={`${anta.className} 
-                tracking-widest relative text-left z-10 text-lg sm:text-4xl 
+                tracking-widest relative text-left z-10 text-lg sm:text-2xl 
                 bg-clip-text text-transparent dark:bg-gradient-to-r dark:from-neutral-200 dark:to-neutral-600 
                 bg-gradient-to-l from-neutral-200 to-neutral-600 `}>
             Services

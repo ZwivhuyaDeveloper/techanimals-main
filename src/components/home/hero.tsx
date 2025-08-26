@@ -3,6 +3,7 @@ import Image, { StaticImageData } from 'next/image';
 import { cn } from '@/lib/utils';
 import { Anta, Audiowide } from 'next/font/google';
 import { TextGenerateEffect } from '../ui/text-generate-effect';
+import backgroundVideo from '@/assets/0000-0120.mp4';
 
 const anta = Anta({
   weight: ["400"],
@@ -33,14 +34,15 @@ export function Hero({
     <section className={cn("relative w-full h-screen -mt-20 overflow-hidden", className)}>
       {/* Background Image */}
       <div className="absolute inset-0 -z-10">
-        <Image
-          src={backgroundImage}
-          alt=""
-          fill
-          priority
-          className="object-cover w-full "
-          quality={100}
-        />
+      {/* eslint-disable-next-line @typescript-eslint/no-require-imports */}
+      <video src={require("../../assets/0000-0120.mp4")} 
+        className='object-cover w-full ' 
+        controls={false}
+        autoPlay
+        loop  
+        muted
+        playsInline
+      />
         <div className="absolute inset-0" style={{
           background: `
             linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, transparent 10%, transparent 70%, rgba(0,0,0,0.7) 100%),
