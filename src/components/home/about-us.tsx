@@ -23,7 +23,7 @@ export function AboutUs({ className }: { className?: string }) {
     <div className={cn("h-[120vh] w-full rounded-md dark:bg-neutral-950 bg-white relative flex flex-col  justify-center antialiased", className)}>
       <div className="max-w-7xl items-start h-full my-45 gap-6 flex flex-col w-full mx-auto">
         <h2 className={`${anta.className} 
-            tracking-widest relative text-left z-10 text-lg sm:text-4xl 
+            tracking-widest relative text-left z-10 text-lg sm:text-2xl 
             bg-clip-text text-transparent dark:bg-gradient-to-r dark:from-neutral-200 dark:to-neutral-600 
             bg-gradient-to-l from-neutral-200 to-neutral-600 `}>
           About Us
