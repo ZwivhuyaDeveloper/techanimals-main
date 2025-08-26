@@ -2,6 +2,7 @@ import React from 'react';
 import Image, { StaticImageData } from 'next/image';
 import { cn } from '@/lib/utils';
 import { Anta, Audiowide } from 'next/font/google';
+import { BackgroundBeams } from '../ui/background-beams';
 
 const anta = Anta({
   weight: ["400"],
@@ -29,7 +30,7 @@ export function Hero({
   className,
 }: HeroProps) {
   return (
-    <section className={cn("relative w-full h-screen overflow", className)}>
+    <section className={cn("relative w-full h-screen -mt-20 overflow-hidden", className)}>
       {/* Background Image */}
       <div className="absolute inset-0 -z-10">
         <Image
@@ -37,7 +38,7 @@ export function Hero({
           alt=""
           fill
           priority
-          className="object-cover w-full h-full"
+          className="object-cover w-full h-[1920px]"
           quality={100}
         />
         <div className="absolute inset-0" style={{
@@ -49,13 +50,14 @@ export function Hero({
       </div>
 
       {/* Content */}
-      <div className="container relative z-10 flex flex-col items-center justify-center h-full px-4 mx-auto text-center text-white">
-        <p className={`${anta.className} text-start w-4xl tracking-widest mx-auto mb-8 text-lg md:text-xl text-white/90`}>
+      <div className="container relative z-50 flex flex-col items-start justify-center h-full w-7xl px-0 mx-auto text-left text-white">
+        <p className={`${anta.className} text-left sm:w-4xl w-4xl tracking-widest mb-8 text-lg md:text-xl text-white/90`}>
           {description}
         </p>
-        <h1 className={`${audiowide.className} mb-6 tracking-widest text-start w-4xl text-4xl font-bold leading-tight md:text-6xl lg:text-6xl font-anta`}>
+        <h1 className={`${audiowide.className} mb-6 z-50 tracking-widest text-start sm:w-4xl w-2xl text-2xl sm:text-4xl font-bold leading-tight md:text-6xl lg:text-7xl font-anta`}>
           {title}
         </h1>
+        <BackgroundBeams />
       </div>
     </section>
   );
