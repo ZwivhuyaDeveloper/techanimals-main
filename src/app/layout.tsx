@@ -3,7 +3,6 @@ import { Geist, Geist_Mono, Anta, Audiowide } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import { NavMenu } from "@/components/layout/nav-menu";
-import { BackgroundBeams } from "@/components/ui/background-beams";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -42,8 +41,8 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} ${anta.variable} ${audiowide.variable} font-sans min-h-screen transition-colors duration-200`}>
         <ThemeProvider>
           <div className="min-h-screen flex flex-col">
-            <main className="flex-1 pt-20">
               <NavMenu />
+            <main className="flex-1 pt-20">
               {children}
             </main>
           </div>
