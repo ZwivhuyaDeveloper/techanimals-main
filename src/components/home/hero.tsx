@@ -2,7 +2,6 @@ import React from 'react';
 import Image, { StaticImageData } from 'next/image';
 import { cn } from '@/lib/utils';
 import { Anta, Audiowide } from 'next/font/google';
-import { BackgroundBeams } from '../ui/background-beams';
 import { TextGenerateEffect } from '../ui/text-generate-effect';
 
 const anta = Anta({
