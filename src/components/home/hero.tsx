@@ -39,7 +39,10 @@ export function Hero({
         muted
         playsInline
       />
-
+        <div className="absolute inset-0 dark:bg-gradient-to-b dark:from-black/70 dark:via-transparent dark:via-10% dark:via-70% dark:to-black/70
+          dark:bg-gradient-to-r dark:from-black/70 dark:via-transparent dark:via-10% dark:via-70% dark:to-black/70
+          bg-gradient-to-b from-white/50 via-transparent via-10% via-70% to-white/50
+          bg-gradient-to-r from-white/50 via-transparent via-10% via-70% to-white/50" />
       </div>
 
       {/* Content */}
