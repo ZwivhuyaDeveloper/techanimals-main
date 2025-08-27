@@ -3,16 +3,18 @@
 import { useTheme } from '@/contexts/ThemeContext';
 import { Moon, Sun } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Button } from './button';
+
 
 export function ThemeToggle({ className }: { className?: string }) {
   const { theme, toggleTheme, isDark } = useTheme();
   
   return (
-    <button
+    <Button
       onClick={toggleTheme}
       className={cn(
         "relative h-9 w-9 rounded-full flex items-center justify-center",
-        "bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700",
+        "bg-gray-100/50 dark:bg-gray-900/20 backdrop-blur-sm hover:bg-gray-200 dark:hover:bg-gray-800",
         "focus:outline-none focus:ring-2 focus:ring-offset-2",
         "focus:ring-primary/50 dark:focus:ring-primary/50",
         "focus:ring-offset-white dark:focus:ring-offset-gray-900",
@@ -32,13 +34,13 @@ export function ThemeToggle({ className }: { className?: string }) {
           className="flex items-center justify-center"
         >
           {isDark ? (
-            <Sun className="h-4 w-4 text-yellow-300" />
-          ) : (
             <Moon className="h-4 w-4 text-gray-600 dark:text-gray-300" />
+          ) : (
+            <Sun className="h-4 w-4 text-yellow-300" />
           )}
         </motion.div>
       </AnimatePresence>
-    </button>
+    </Button>
   );
 }
 

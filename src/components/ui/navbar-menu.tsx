@@ -1,8 +1,15 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import React from "react";
 import { motion } from "motion/react";
+import { cn } from "@/lib/utils";
+import { Anta } from "next/font/google";
 
-
+const anta = Anta({
+  weight: ["400"],
+  variable: "--font-anta",
+  subsets: ["latin"],
+});
 
 const transition = {
   type: "spring",
@@ -70,7 +77,7 @@ export const Menu = ({
   return (
     <nav
       onMouseLeave={() => setActive(null)} // resets the state
-      className="relative rounded-full border border-transparent dark:bg-black/10 backdrop-blur-lg dark:border-white/[0.2] bg-white/10 shadow-input flex justify-center space-x-4 px-8 py-6 "
+      className={`${cn(anta.className)} relative rounded-full border border-transparent dark:bg-black/10 backdrop-blur-lg dark:border-white/[0.2] bg-white/10 shadow-input flex justify-center space-x-4 px-8 py-4 `}
     >
       {children}
     </nav>

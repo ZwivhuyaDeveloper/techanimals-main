@@ -1,11 +1,14 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import React, { useState } from "react";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "@/components/ui/navbar-menu";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import techAnimalsLogo from "@/assets/tech-animals.png";
+import techAnimalsLogo from "@/assets/Group 1.png";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import Link from 'next/link';
+import { div } from 'motion/react-client';
+
 
 export function NavMenu({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
@@ -14,16 +17,21 @@ export function NavMenu({ className }: { className?: string }) {
       className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50 flex items-center justify-center px-1", className)}
     >
       <Menu setActive={setActive}>
-        <div className="flex items-center h-fit gap-12 justify-between">
-        <div>
-            <Link href="/">
-              <Image
-                src={techAnimalsLogo}
-                alt="Logo"
-                width={200}
-                height={200}
-                className=" w-full h-full"
-              />
+
+        <div className="flex items-center h-[40px] gap-25 justify-between">
+          <div className="w-full h-full flex flex-row gap-5  items-center container  justify-start">
+          <Link href="/" className="flex items-center flex-row gap-4 w-full justify-start">
+                <img
+                  src={techAnimalsLogo.src}
+                  alt="TechAnimals Logo"
+                  width={50}
+                  height={50}
+                  className=" object-cover w-15 h-15"
+                />
+                <div className="flex flex-col items-start w-full">
+                <span className="text-black text-left dark:text-white text-sm tracking-widest">TECHANIMALS</span>
+                <span className="text-black text-left dark:text-white text-[9px] w-50">SOFTWARE DEVELOPMENT</span> 
+                </div>
             </Link>
           </div>
         <MenuItem setActive={setActive} active={active} item="Services">

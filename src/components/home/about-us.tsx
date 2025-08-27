@@ -5,6 +5,8 @@ import { Audiowide } from "next/font/google";
 import { Anta } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { Card, CardContent } from "@/components/ui/card";
+import Image from "next/image";
+import asset from "@/assets/pyramid.png";
 
 const audiowide = Audiowide({
   weight: ["400"],
@@ -35,8 +37,11 @@ export function AboutUs({ className }: { className?: string }) {
             Your Trusted
             Development Partner
         </h1>
+        <div>
+          <Image src={asset} alt="" width={200} height={200} className="absolute top-40 z-10 right-70" />
+        </div>
         <div className="grid grid-cols-2 gap-4 mt-6">
-            <Card className="w-full h-[60vh] z-50">
+            <Card className="w-full h-[60vh] z-10">
                 <CardContent>
                     <p>Our team of experienced developers is dedicated to delivering high-quality solutions that meet your needs. We use the latest technologies and best practices to ensure that your project is completed on time and to the highest standard.</p>
                 </CardContent>
