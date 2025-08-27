@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "@/components/ui/navbar-menu";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import techAnimalsLogo from "@/assets/Group 1.png";
+import techAnimalsLogo from "@/assets/Group_logo.png";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import Link from 'next/link';
 import { div } from 'motion/react-client';
