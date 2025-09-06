@@ -15,7 +15,7 @@ export function ThemeToggle({ className }: { className?: string }) {
       className={cn(
         "relative h-9 w-9 rounded-full flex items-center justify-center",
         "bg-gray-100/50 dark:bg-gray-900/20 backdrop-blur-sm hover:bg-gray-200 dark:hover:bg-gray-800",
-        "focus:outline-none focus:ring-2 focus:ring-offset-2",
+        "focus:outline-none focus:ring-0 focus:ring-offset-0",
         "focus:ring-primary/50 dark:focus:ring-primary/50",
         "focus:ring-offset-white dark:focus:ring-offset-gray-900",
         "transition-all duration-200",
@@ -34,9 +34,9 @@ export function ThemeToggle({ className }: { className?: string }) {
           className="flex items-center justify-center"
         >
           {isDark ? (
-            <Moon className="h-4 w-4 text-gray-600 dark:text-gray-300" />
+            <Moon color='cyan' fill='cyan' className="h-4 w-4" />
           ) : (
-            <Sun className="h-4 w-4 text-yellow-300" />
+            <Sun color='orange' fill='orange' className="h-4 w-4" />
           )}
         </motion.div>
       </AnimatePresence>

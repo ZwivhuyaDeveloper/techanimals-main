@@ -49,7 +49,7 @@ export default function Home() {
         <section>
           <Hero
             title="UNLOCKING DIGITAL SUCCESS"
-            description="TECH SOLUTIONS WITHOUT THE HASSLE . . ."
+            description="TECH SOLUTIONS WITHOUT THE HASSLE..."
           />
         </section>
         <section className="">
