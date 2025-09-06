@@ -44,7 +44,7 @@ export const TextGenerateEffect = ({
           return (
             <motion.span
               key={word + idx}
-              className="bg-clip-text text-transparent dark:bg-gradient-to-r dark:from-neutral-50 dark:via-neutral-50 dark:to-neutral-100 bg-gradient-to-l from-neutral-200 to-neutral-600 opacity-0"
+              className="bg-clip-text text-transparent dark:bg-gradient-to-r dark:from-neutral-50 dark:via-neutral-50 dark:to-neutral-100 bg-gradient-to-l from-neutral-200 to-neutral-200 opacity-0"
               style={{
                 filter: filter ? "blur(50px)" : "none",
               }}
@@ -60,7 +60,7 @@ export const TextGenerateEffect = ({
   return (
     <div className={cn("font-bold", className)}>
       <div className="mt-4">
-        <div className={`${audiowide.className}  backdrop-blur-sm shadow-blue-300/20 rounded-4xl px-6 w-3xl py-2 text-6xl leading-normal tracking-widest`}>
+        <div className={`${audiowide.className}  backdrop-blur-sm shadow-blue-300/20 rounded-4xl px-6 w-3xl py-2 text-5xl leading-normal tracking-widest`}>
           {renderWords()}
         </div>
       </div>

@@ -31,7 +31,7 @@ export function Hero({
       {/* Background Image */}
       <div className="absolute inset-0 -z-10">
       {/* eslint-disable-next-line @typescript-eslint/no-require-imports */}
-      <video src={require("../../assets/0000-0120.mp4")} 
+      <video src={require("../../assets/0000-0128.mp4")} 
         className='object-cover h-full w-full ' 
         controls={false}
         autoPlay
@@ -48,7 +48,7 @@ export function Hero({
       {/* Content */}
       <div className="container relative z-10 flex flex-col items-start justify-center h-full w-full max-w-7xl px-4 mx-auto text-left text-white">
         <div className="w-full max-w-4xl">
-          <p className={`${anta.className} text-lg px-6 md:text-xl tracking-widest text-white/90 mb-6`}>
+          <p className={`${anta.className} text-md px-6 sm:text-lg tracking-widest text-white/90 mb-6`}>
             {description}
           </p>
           <h1 className={`${audiowide.className} mb-8`}>
